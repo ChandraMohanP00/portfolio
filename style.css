@@ -1,0 +1,526 @@
+* {
+  /* font-family: 'Times New Roman', Times, serif; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+#services {
+  padding-top: 56px;
+  /* Assuming the height of your navbar is 56px */
+}
+
+#about {
+  padding-top: 56px;
+}
+
+#home {
+  padding-top: 56px;
+}
+
+#portfolio {
+  padding-top: 56px;
+}
+
+.navbar {
+  /* background-color: blueviolet; */
+  background-image: linear-gradient(201deg, rgba(148, 148, 148, 0.07) 0%, rgba(148, 148, 148, 0.07) 50%,rgba(83, 83, 83, 0.07) 50%, rgba(83, 83, 83, 0.07) 100%),linear-gradient(192deg, rgba(176, 176, 176, 0.08) 0%, rgba(176, 176, 176, 0.08) 50%,rgba(180, 180, 180, 0.08) 50%, rgba(180, 180, 180, 0.08) 100%),linear-gradient(48deg, rgba(185, 185, 185, 0.1) 0%, rgba(185, 185, 185, 0.1) 50%,rgba(243, 243, 243, 0.1) 50%, rgba(243, 243, 243, 0.1) 100%),linear-gradient(65deg, rgba(172, 172, 172, 0.09) 0%, rgba(172, 172, 172, 0.09) 50%,rgba(209, 209, 209, 0.09) 50%, rgba(209, 209, 209, 0.09) 100%),linear-gradient(4deg, rgba(224, 224, 224, 0.03) 0%, rgba(224, 224, 224, 0.03) 50%,rgba(49, 49, 49, 0.03) 50%, rgba(49, 49, 49, 0.03) 100%),linear-gradient(228deg, rgba(152, 152, 152, 0.03) 0%, rgba(152, 152, 152, 0.03) 50%,rgba(130, 130, 130, 0.03) 50%, rgba(130, 130, 130, 0.03) 100%),linear-gradient(163deg, rgba(170, 170, 170, 0.08) 0%, rgba(170, 170, 170, 0.08) 50%,rgba(232, 232, 232, 0.08) 50%, rgba(232, 232, 232, 0.08) 100%),linear-gradient(152deg, rgba(12, 12, 12, 0.05) 0%, rgba(12, 12, 12, 0.05) 50%,rgba(161, 161, 161, 0.05) 50%, rgba(161, 161, 161, 0.05) 100%),linear-gradient(302deg, rgba(48, 48, 48, 0.1) 0%, rgba(48, 48, 48, 0.1) 50%,rgba(195, 195, 195, 0.1) 50%, rgba(195, 195, 195, 0.1) 100%),linear-gradient(90deg, rgb(144, 14, 253),rgb(74, 115, 255));
+  color: white;
+  margin: 10px;
+}
+
+.changing-text {
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  color: blueviolet;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.10em;
+  animation:
+    typing 1.5s steps(30, end),
+    erasing 3.5s steps(30, end) infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes erasing {
+
+  0%,
+  100% {
+    width: 100%;
+  }
+
+  50% {
+    width: 0;
+  }
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  display: inline-block;
+  font-size: 24px;
+  margin: 0 8px;
+  width: 60px;
+  /* Set width and height to create a circle */
+  height: 60px;
+  border-radius: 50%;
+  border-color: chocolate;
+
+  padding: 8px;
+  color: blue;
+  /* Change the color as needed */
+  /* background-color: #007bff; Change the background color as needed */
+  transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 4;
+  background-color: blue;
+  color: white;
+  /* Change the hover background color as needed */
+}
+
+.rounded-pill {
+  color: white;
+  background-color: blue;
+  margin-left: 10px;
+}
+
+.rounded-pill:hover {
+  opacity: 4;
+  background-color: white;
+  color: blue;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(200px);
+  animation: fadeInUp 1s ease-out forwards;
+  /* Use 'forwards' to keep the final state */
+}
+
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.zoom-in {
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 1s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.tada-icon {
+  animation: tada 1s infinite;
+  /* Infinite loop for continuous effect */
+}
+
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.full-screen-section {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* #portfolio{
+  height: 150vh;
+  overflow: hidden;
+} */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-in-text {
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-down {
+  animation: slideInDown 1s ease-out forwards;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.service-card {
+  height: 200px;
+  /* Adjust the height as needed */
+  transition: transform 0.3s ease;
+  /* Add a smooth transition effect */
+
+}
+
+.service-card .card-body {
+  display: grid;
+  /* align-items: center; */
+  /* justify-content: center; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.service-card .card-title {
+  font-family: 'Your Beautiful Font', sans-serif;
+  /* Replace 'Your Beautiful Font' with the actual font you want to use */
+  font-size: 1.5em;
+  /* Adjust the font size as needed */
+}
+
+.service-card:hover {
+  animation: pulse 1s infinite;
+  transform: scale(1.1);
+}
+.service-card {
+  background-image: linear-gradient(45deg, rgba(254, 246, 210, 0.53) 0%, rgba(254, 246, 210, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 14.286%, rgba(221, 240, 216, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 28.572%, rgba(188, 233, 223, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 42.858%, rgba(156, 227, 229, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 57.144%, rgba(123, 220, 235, 0.53) 71.42999999999999%, rgba(90, 214, 242, 0.53) 71.43%, rgba(90, 214, 242, 0.53) 85.71600000000001%, rgba(57, 207, 248, 0.53) 85.716%, rgba(57, 207, 248, 0.53) 100.002%), linear-gradient(135deg, rgb(246, 99, 200) 0%, rgb(246, 99, 200) 12.5%, rgb(223, 98, 196) 12.5%, rgb(223, 98, 196) 25%, rgb(199, 97, 192) 25%, rgb(199, 97, 192) 37.5%, rgb(176, 96, 188) 37.5%, rgb(176, 96, 188) 50%, rgb(152, 95, 184) 50%, rgb(152, 95, 184) 62.5%, rgb(129, 94, 180) 62.5%, rgb(129, 94, 180) 75%, rgb(105, 93, 176) 75%, rgb(105, 93, 176) 87.5%, rgb(82, 92, 172) 87.5%, rgb(82, 92, 172) 100%);
+}
+
+.card-text {
+  color: white;
+}
+.img-fluid{
+  border-radius: 75% 21% 75% 25% / 53% 10% 85% 47%;
+  /* background-color: pink; */
+}
+@keyframes slideInDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.slideInDown {
+  animation: slideInDown 1s ease-in-out forwards;
+}
+
+.slideInLeft {
+  animation: slideInLeft 1s ease-in-out forwards;
+}
+
+.slideInRight {
+  animation: slideInRight 1s ease-in-out forwards;
+}
+
+
+/* .hidden-details {
+  display: none;
+  color: black;
+}
+
+.portfolio-card:hover .hidden-details {
+  display: block;
+  color: black;
+} */
+.card-img-top {
+  color: white;
+  background-image: linear-gradient(0deg, rgba(12, 31, 22, 0.2) 0%, rgba(12, 31, 22, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 100.002%), linear-gradient(22.5deg, rgba(12, 31, 22, 0.2) 0%, rgba(12, 31, 22, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 100.002%), linear-gradient(45deg, rgba(12, 31, 22, 0.2) 0%, rgba(12, 31, 22, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 16.667%, rgba(47, 48, 61, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 33.334%, rgba(152, 97, 180, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 50.001%, rgba(187, 114, 219, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 66.668%, rgba(82, 64, 101, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 83.335%, rgba(117, 81, 140, 0.2) 100.002%), linear-gradient(90deg, rgb(106, 106, 106), rgb(42, 42, 42));
+}
+
+.card-text {
+  color: black;
+}
+
+.portfolio-card {
+  position: relative;
+}
+
+.hidden-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Adjust background color and opacity as needed */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Optional: Add a box shadow for a subtle effect */
+  z-index: 1;
+}
+
+.portfolio-card:hover .hidden-details {
+  display: block;
+}
+
+#contact {
+  padding-top: 56px;
+}
+
+#contact-form {
+  margin-top: 30px;
+}
+
+#contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+#contact-form label {
+  font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#contact-form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#contact-form button:hover {
+  background-color: #0056b3;
+}
+
+#contact {
+  background-image: linear-gradient(206deg, rgba(72, 45, 45, 0.46) 0%, rgba(72, 45, 45, 0.46) 14.286%, rgba(102, 42, 45, 0.46) 14.286%, rgba(102, 42, 45, 0.46) 28.572%, rgba(131, 39, 44, 0.46) 28.572%, rgba(131, 39, 44, 0.46) 42.858%, rgba(161, 36, 44, 0.46) 42.858%, rgba(161, 36, 44, 0.46) 57.144%, rgba(191, 33, 43, 0.46) 57.144%, rgba(191, 33, 43, 0.46) 71.43%, rgba(220, 30, 43, 0.46) 71.43%, rgba(220, 30, 43, 0.46) 85.716%, rgba(250, 27, 42, 0.46) 85.716%, rgba(250, 27, 42, 0.46) 100.002%), linear-gradient(127deg, rgb(254, 36, 223) 0%, rgb(254, 36, 223) 14.286%, rgb(227, 44, 210) 14.286%, rgb(227, 44, 210) 28.572%, rgb(201, 52, 198) 28.572%, rgb(201, 52, 198) 42.858%, rgb(174, 60, 185) 42.858%, rgb(174, 60, 185) 57.144%, rgb(147, 67, 172) 57.144%, rgb(147, 67, 172) 71.43%, rgb(121, 75, 160) 71.43%, rgb(121, 75, 160) 85.716%, rgb(94, 83, 147) 85.716%, rgb(94, 83, 147) 100.002%);
+}
+.bn632-hover {
+  width: 160px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 55px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:hover {
+  background-position: 100% 0;
+  /* moz-transition: all .4s ease-in-out; */
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.bn632-hover:focus {
+  outline: none;
+}
+
+.bn632-hover.bn23 {
+  background-image: linear-gradient(
+    to right,
+    #009245,
+    #fcee21,
+    #00a8c5,
+    #d9e021
+  );
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+.bn5 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(255, 255, 255);
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.bn5:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowingbn5 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowingbn5 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.bn5:active {
+  color: #000;
+}
+
+.bn5:active:after {
+  background: transparent;
+}
+
+.bn5:hover:before {
+  opacity: 1;
+}
+
+.bn5:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #191919;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+#home{
+  background-color: #101820;
+  color: #FEE715;
+}
+#about{
+  background-color: #80C4B7;
+  color: white;
+}
+#services{
+  background-color: #7C8363;
+  color: #31473A;
+}
+#portfolio{
+  background-color: #8AB6F9;
+  color: #00246B;
+}
+.download{
+  text-decoration: none;
+  color: white;
+}
